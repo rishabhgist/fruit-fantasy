@@ -1,7 +1,14 @@
 //Declare global container constant to represent <div> container
 const container = document.getElementById('container');
+const fruitItem = document.getElementById('fruit-element');
 //Define Fruit Object type with required properties
-
+type fruit = {
+    id: number,
+    name: string,
+    price: number,
+    image: string,
+    unit: string
+};
 
 //Fetch data from server using getFruits() method
 
