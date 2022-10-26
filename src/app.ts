@@ -1,5 +1,5 @@
 //Declare global container constant to represent <div> container
-
+const container = document.getElementById('container');
 //Define Fruit Object type with required properties
 
 
