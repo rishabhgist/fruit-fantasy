@@ -7,9 +7,6 @@ Fruit Fantasy app allows its customers to view the fresh fruits offered on daily
 Fonts used:
 
 - `'Times New Roman', 'Times', 'serif' (Heading)`
-
-### Problem Statement
-
 #
 
 ![](./fruit-fantasy.png)
