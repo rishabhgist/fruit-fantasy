@@ -17,8 +17,18 @@ var transform = function (data) {
             image: data[key].image,
             unit: data[key].unit
         };
-        console.log(transformFruit);
+        showFruit(transformFruit);
     }
 };
 //Inside showFruit() method, display each transformedFruit as card by creating HTML code and appending it to the div container
+var showFruit = function (transformFruit) {
+    var img = document.createElement('img');
+    img.setAttribute('src', transformFruit.image);
+    img.setAttribute('class', 'card-img-top');
+    fruitItem === null || fruitItem === void 0 ? void 0 : fruitItem.append(img);
+    var cardBody = document.createElement('div');
+    cardBody.setAttribute('class', 'card-body');
+    cardBody.innerHTML = "<h5 class=\"card-title\">".concat(transformFruit.name, "</h5><h6 class=\"card-subtitle mb-2 text-muted\">Price:$").concat(transformFruit.price, " per ").concat(transformFruit.unit, "</h6>");
+    fruitItem === null || fruitItem === void 0 ? void 0 : fruitItem.insertAdjacentElement('beforeend', cardBody);
+};
 //Call getFruits() method globally
