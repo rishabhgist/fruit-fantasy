@@ -1,6 +1,5 @@
 //Declare global container constant to represent <div> container
 var container = document.getElementById('container');
-var fruitItem = document.getElementById('fruit-element');
 //Fetch data from server using getFruits() method
 var getFruits = function () {
     fetch('http://localhost:3000/fruits')
@@ -22,6 +21,9 @@ var transform = function (data) {
 };
 //Inside showFruit() method, display each transformedFruit as card by creating HTML code and appending it to the div container
 var showFruit = function (transformFruit) {
+    container.innerHTML += "<div class=\"card\" style=\"width: 13rem;\" id=\"fruit-item-".concat(transformFruit.id, "\"></div>");
+    var fruitItem = document.getElementById("fruit-item-".concat(transformFruit.id));
+    console.log(fruitItem);
     var img = document.createElement('img');
     img.setAttribute('src', transformFruit.image);
     img.setAttribute('class', 'card-img-top');
@@ -32,3 +34,4 @@ var showFruit = function (transformFruit) {
     fruitItem === null || fruitItem === void 0 ? void 0 : fruitItem.insertAdjacentElement('beforeend', cardBody);
 };
 //Call getFruits() method globally
+getFruits();

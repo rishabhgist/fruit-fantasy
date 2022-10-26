@@ -1,6 +1,5 @@
 //Declare global container constant to represent <div> container
-const container = document.getElementById('container');
-const fruitItem = document.getElementById('fruit-element');
+const container:any = document.getElementById('container');
 //Define Fruit Object type with required properties
 type fruit = {
     id: number,
@@ -33,6 +32,9 @@ const transform = (data: any) => {
 
 //Inside showFruit() method, display each transformedFruit as card by creating HTML code and appending it to the div container
 const showFruit = (transformFruit: fruit) => {
+    container.innerHTML += `<div class="card" style="width: 13rem;" id="fruit-item-${transformFruit.id}"></div>`;
+    let fruitItem = document.getElementById(`fruit-item-${transformFruit.id}`);
+    console.log(fruitItem);
     let img = document.createElement('img');
     img.setAttribute('src', transformFruit.image);
     img.setAttribute('class', 'card-img-top');
@@ -43,3 +45,5 @@ const showFruit = (transformFruit: fruit) => {
     fruitItem?.insertAdjacentElement('beforeend', cardBody);
 }
 //Call getFruits() method globally
+
+getFruits();
