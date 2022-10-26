@@ -34,7 +34,6 @@ const transform = (data: any) => {
 const showFruit = (transformFruit: fruit) => {
     container.innerHTML += `<div class="card" style="width: 13rem;" id="fruit-item-${transformFruit.id}"></div>`;
     let fruitItem = document.getElementById(`fruit-item-${transformFruit.id}`);
-    console.log(fruitItem);
     let img = document.createElement('img');
     img.setAttribute('src', transformFruit.image);
     img.setAttribute('class', 'card-img-top');

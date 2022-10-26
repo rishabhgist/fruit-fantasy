@@ -23,7 +23,6 @@ var transform = function (data) {
 var showFruit = function (transformFruit) {
     container.innerHTML += "<div class=\"card\" style=\"width: 13rem;\" id=\"fruit-item-".concat(transformFruit.id, "\"></div>");
     var fruitItem = document.getElementById("fruit-item-".concat(transformFruit.id));
-    console.log(fruitItem);
     var img = document.createElement('img');
     img.setAttribute('src', transformFruit.image);
     img.setAttribute('class', 'card-img-top');
